@@ -22,7 +22,7 @@ RUN pip install sqlparse==0.4.4
 RUN pip install typing_extensions==4.8.0
 
 
-RUN python manage.py makemigrations 
+# RUN python manage.py makemigrations 
 RUN python /app/manage.py migrate
 # RUN python /app/manage.py collectstatic
 
