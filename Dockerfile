@@ -13,7 +13,13 @@ RUN pip install --upgrade pip
 RUN pip install django
 RUN pip install djangorestframework
 RUN pip install gunicorn
-RUN pip install -r /app/requirements.txt
+RUN pip install asgiref==3.7.2
+RUN pip install mysqlclient==2.2.0
+RUN pip install python-decouple==3.8
+RUN pip install python-dotenv==1.0.0
+RUN pip install pytz==2023.3.post1
+RUN pip install sqlparse==0.4.4
+RUN pip install typing_extensions==4.8.0
 
 
 RUN python manage.py makemigrations 
