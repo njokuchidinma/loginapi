@@ -23,8 +23,8 @@ RUN pip install typing_extensions==4.8.0
 
 
 # RUN python manage.py makemigrations 
-RUN python /app/manage.py migrate
-# RUN python /app/manage.py collectstatic
+# RUN python /app/manage.py migrate
+
 
 # COPY ./entrypoint.sh /app/entrypoint.sh
 
@@ -33,4 +33,4 @@ EXPOSE 8000
 
 # ENTRYPOINT ["sh", "/app/entrypoint.sh"]
 
-CMD ["gunicorn", "--bind", ":8000", "--timeout", "600", "--workers", "1", "drf.wsgi:application"]
+CMD ["gunicorn", "--bind", ":8000", "--timeout", "600", "--workers", "1", "freelunch.wsgi:application"]
