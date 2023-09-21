@@ -14,7 +14,7 @@ RUN pip install django
 RUN pip install djangorestframework
 RUN pip install gunicorn
 RUN pip install asgiref==3.7.2
-RUN pip install mysqlclient==2.2.0
+RUN pip install mysqlclient==2.2.0 --no-binary :all:
 RUN pip install python-decouple==3.8
 RUN pip install python-dotenv==1.0.0
 RUN pip install pytz==2023.3.post1
